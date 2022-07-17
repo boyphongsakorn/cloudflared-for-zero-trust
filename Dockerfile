@@ -14,7 +14,7 @@ RUN \
     && wget -O cloudflared.rpm https://github.com/cloudflare/cloudflared/releases/$CVERSION/cloudflared-linux-$ARCH.rpm \
     && yum localinstall -y cloudflared.rpm
 
-#RUN export ARCH=`uname -m`
+RUN export ARCH=`uname -m`
 #ENV TZ="Asia/Bangkok"
 #ENV CVERSION="latest/download"
 #ENV CHECKARCH=${ARCH}
