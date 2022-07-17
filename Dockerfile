@@ -22,4 +22,4 @@ RUN \
 #RUN cloudflared -v
 #RUN cloudflared update
 
-CMD cloudflared service install $token
+CMD cloudflared tunnel --no-autoupdate run --token $token
