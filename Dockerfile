@@ -9,7 +9,7 @@ RUN \
     && if [[ `uname -m` = "armhf" ]]; then ARCH="arm"; fi \
     && if [[ `uname -m` = "armv7l" ]]; then ARCH="arm"; fi \
     && if [[ `uname -m` = "ppc64le" ]]; then ARCH="386"; fi \
-    && apk add --no-cache libc6-compat yq \
+    && apk add --no-cache yum libc6-compat yq \
     && wget -O cloudflared.rpm https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-`uname -m`.rpm \
     && yum localinstall -y cloudflared.rpm
 
